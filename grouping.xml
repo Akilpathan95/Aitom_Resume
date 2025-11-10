@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+
+    <!--
+    <groups>
+        <run>
+            <include name="Master"/>
+            <include name=""/>
+            <exclude name=""/>
+        </run>
+    </groups>
+     -->
+
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test thread-count="5" name="test">
+        <classes>
+
+        </classes>
+    </test>
+
+</suite>
