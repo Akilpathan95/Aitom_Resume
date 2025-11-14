@@ -17,17 +17,7 @@ pipeline {
                 'ALL_TESTS',
                 'TC002_CreateRequisition',
                 'TC003_GenerateJD',
-                'TC004_Keyword',
-                'TC005_HiringTeam',
-                'TC006_InterviewSetup',
-                'TC007_AddCandidate_AddManually',
-                'TC008_AddCandidate_AddBulk',
-                'TC009_SendInviteAnd_InterviewLink',
-                'TC0010_EditCandidate',
-                'TC0011_CreateRequisitionBulk',
-                'TC0012_Compensation',
-                'TC0013_AddCandidate_ExcelUpload',
-                'TC0014_RequirementIDDuplicates'
+                'TC004_Keyword'
             ],
             description: 'Select test class to run'
         )
@@ -78,7 +68,7 @@ pipeline {
             }
         }
 
-        stage('Report') {
+        stage('Report') {a
             steps {
                 publishHTML(target: [
                     reportName: 'Extent Report',

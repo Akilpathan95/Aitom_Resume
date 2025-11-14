@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -104,7 +105,7 @@ public class BaseClass {
 
     }
 
-    //@AfterClass(groups = "Master")
+    @AfterSuite(groups = "Master")
     public void tearDown()
     {
         driver.quit();

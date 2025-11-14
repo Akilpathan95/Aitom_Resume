@@ -10,7 +10,7 @@
         <parameter name="os" value="Windoxws"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <!-- <class name=/> -->
+            <class name="testCases.TC001_SignUpAccount"/>
         </classes>
     </test>
 </suite>
