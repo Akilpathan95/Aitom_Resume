@@ -20,9 +20,18 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//span[normalize-space()='Sign up to create account']")
     WebElement btnSignUpAccount;
 
+    @FindBy(xpath = "//*[contains(text(), 'Sign') and contains(text(), 'Register')]")
+    WebElement txtSignUpRegister;
+
+    public String getSignUpRegisterText()
+    {
+        return txtSignUpRegister.getText().trim();
+    }
+
     public void clkLoginButton()
     {
         //String mainWindow = driver.getWindowHandle();
+        driver.getTitle();
 
         btnLogin.click();
         System.out.println("Clicked on the Login button");
@@ -30,7 +39,10 @@ public class LoginPage extends BasePage {
         List<String> tabs=new ArrayList<>(driver.getWindowHandles());
 
         driver.switchTo().window(tabs.get(1));
-        System.out.printf("Switched to a new tab.");
+        System.out.println("Switched to a new tab.");
+
+
+
     }
 
     public void clkSignUpButton()

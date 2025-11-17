@@ -105,7 +105,7 @@ public class BaseClass {
 
     }
 
-    @AfterSuite(groups = "Master")
+    //@AfterSuite(groups = "Master")
     public void tearDown()
     {
         driver.quit();
