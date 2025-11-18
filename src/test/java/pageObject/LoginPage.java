@@ -23,6 +23,12 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[contains(text(), 'Sign') and contains(text(), 'Register')]")
     WebElement txtSignUpRegister;
 
+    @FindBy(xpath = "//input[@placeholder='Enter your email']")
+    WebElement txtEmail;
+
+    @FindBy(xpath = "//input[@placeholder='Enter your password']")
+    WebElement txtPassword;
+
     public String getSignUpRegisterText()
     {
         return txtSignUpRegister.getText().trim();
@@ -51,4 +57,15 @@ public class LoginPage extends BasePage {
         System.out.println("Clicked on the Sign Up Create Account button");
     }
 
+    public void enterEmail(String email)
+    {
+        txtEmail.sendKeys(email);
+        System.out.println("Email entered");
+    }
+
+    public void enterPassword(String password)
+    {
+        txtPassword.sendKeys(password);
+        System.out.println("Password entered");
+    }
 }
