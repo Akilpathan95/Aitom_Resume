@@ -14,7 +14,7 @@ public class TC002_VerifyLogin extends BaseClass {
         LoginPage lp=new LoginPage(driver);
         lp.clkLoginButton();
         lp.enterEmail("akil.pathan@orgzstack.com");
-        lp.enterPassword("Akil@7086");
+        lp.enterPassword("Akil@2222");
         lp.clkLoginButton();
 
         DashboardPage dp=new DashboardPage(driver);
@@ -22,5 +22,6 @@ public class TC002_VerifyLogin extends BaseClass {
         System.out.println(actualResult);
         Assert.assertTrue(actualResult.contains("Welcome"), "Expected Welcome in the text but we found: " + actualResult);
 
+        //znjs xsco zzzl qekm
     }
 }

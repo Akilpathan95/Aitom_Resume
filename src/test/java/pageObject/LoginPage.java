@@ -29,6 +29,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//input[@placeholder='Enter your password']")
     WebElement txtPassword;
 
+    @FindBy(xpath = "//span[normalize-space()='Forgot password?']")
+    WebElement btnForgetPassword;
+
     public String getSignUpRegisterText()
     {
         return txtSignUpRegister.getText().trim();
@@ -67,5 +70,11 @@ public class LoginPage extends BasePage {
     {
         txtPassword.sendKeys(password);
         System.out.println("Password entered");
+    }
+
+    public void clkForgetPassword()
+    {
+        btnForgetPassword.click();
+        System.out.println("Clicked on the Forget Password");
     }
 }
